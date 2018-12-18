@@ -13,7 +13,7 @@ podAnnotations: {}
 
 image:
   repository: 47.104.65.202/xuefeng/pipeline-httpserver
-  tag: 13
+  tag: "13"
   pullPolicy: IfNotPresent
 # imagePullSecrets:
     # - name: docker
