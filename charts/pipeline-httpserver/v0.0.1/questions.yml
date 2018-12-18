@@ -18,7 +18,7 @@ questions:
     type: string
     label: Image Tag
 - variable: ingress.enabled
-  default: true
+  default: false
   description: "Expose app using Layer 7 Load Balancer - ingress"
   type: boolean
   label: Expose app using Layer 7 Load Balancer
