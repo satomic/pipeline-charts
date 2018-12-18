@@ -19,7 +19,8 @@ spec:
 {{ toYaml .Values.imagePullSecrets | indent 8 }}
       {{- end }}
       containers:
-      - name: pipeline-httpserver
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.service.port }}
