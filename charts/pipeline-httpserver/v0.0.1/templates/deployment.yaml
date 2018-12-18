@@ -5,6 +5,10 @@ metadata:
   labels:
     app: pipeline-httpserver
 spec:
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
