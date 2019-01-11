@@ -1,0 +1,52 @@
+questions:
+- variable: defaultImage
+  default: true
+  description: "Use default Docker image"
+  label: Use Default Image
+  type: boolean
+  show_subquestion_if: false
+  group: "Container Images"
+  subquestions:
+  - variable: image.repository
+    default: "47.104.65.202/xuefeng/pipeline-httpserver"
+    description: "WordPress image name"
+    type: string
+    label: httpserver Image Name
+  - variable: image.tag
+    default: "9"
+    description: "httpserver image tag"
+    type: string
+    label: Image Tag
+- variable: ingress.enabled
+  default: false
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0]
+    default: "xip.io"
+    description: "Hostname to your Docker Registry installation"
+    type: hostname
+    required: true
+    label: Hostname
+- variable: service.type
+  default: "NodePort"
+  description: "httpserver Service type"
+  type: enum
+  options:
+    - "ClusterIP"
+    - "NodePort"
+  required: true
+  label: httpserver Service Type
+  show_subquestion_if: "NodePort"
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: service.nodePort
+    default: ""
+    description: "NodePort http port(to set explicitly, choose port between 30000-32767)"
+    type: int
+    min: 30000
+    max: 32767
+    label: NodePort Http Port
