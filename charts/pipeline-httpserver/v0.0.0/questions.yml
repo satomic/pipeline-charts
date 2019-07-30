@@ -8,7 +8,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "47.75.82.15/rancher/pipeline-httpserver"
+    default: "47.75.206.222/rancher/pipeline-httpserver"
     description: "WordPress image name"
     type: string
     label: httpserver Image Name
