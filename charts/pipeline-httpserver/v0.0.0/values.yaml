@@ -19,8 +19,8 @@ service:
   name: pipeline-httpserver-service
   type: NodePort
   # clusterIP:
-  port: 8080
-  targetport: 8080
+  port: 80
+  targetport: 80
   # nodePort:
   annotations: {}
   # foo.io/bar: "true"
