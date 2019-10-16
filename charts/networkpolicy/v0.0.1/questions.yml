@@ -1,5 +1,5 @@
 questions:
-- variable: service.type
+- variable: access.type
   default: "not-allow"
   description: "allow access between a & b"
   type: enum
