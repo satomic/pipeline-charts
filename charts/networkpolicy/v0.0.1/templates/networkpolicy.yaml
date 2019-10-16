@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ab-policy
+spec:
+  podSelector: {}
+{{- if (eq .Values.access.type "allow") }}
+  ingress:
+  - {}
+{{- end }}
+  ingress:
+  - {}
+  policyTypes:
+  - Ingress
+

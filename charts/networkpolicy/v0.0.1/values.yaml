@@ -1,0 +1,6 @@
+# Default values for docker-registry.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+access:
+  type: not-allow

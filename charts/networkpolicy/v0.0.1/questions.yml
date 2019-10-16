@@ -1,0 +1,10 @@
+questions:
+- variable: service.type
+  default: "not-allow"
+  description: "allow access between a & b"
+  type: enum
+  options:
+    - "not-allow"
+    - "allow"
+  required: true
+  label: allow access between a & b
