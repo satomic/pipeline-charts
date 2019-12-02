@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   selector:
-    app: pipeline-httpserver
+    app: pipeline-httpserver-app
   type: {{ .Values.service.type }}
 {{- if (and (eq .Values.service.type "ClusterIP") (not (empty .Values.service.clusterIP))) }}
   clusterIP: {{ .Values.service.clusterIP }}

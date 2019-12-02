@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipeline-httpserver
+  name: pipeline-httpserver-app
   labels:
     app: pipeline-httpserver
     version: v2
