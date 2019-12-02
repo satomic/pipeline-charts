@@ -4,6 +4,7 @@ metadata:
   name: pipeline-httpserver
   labels:
     app: pipeline-httpserver
+    version: v2
 spec:
   updateStrategy:
     rollingUpdate:
@@ -13,10 +14,12 @@ spec:
   selector:
     matchLabels:
       app: pipeline-httpserver
+      version: v2
   template:
     metadata:
       labels:
         app: pipeline-httpserver
+        version: v2
     spec:
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
