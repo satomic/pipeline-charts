@@ -8,12 +8,12 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "47.75.206.222/rancher/pipeline-httpserver"
+    default: "nginx"
     description: "WordPress image name"
     type: string
     label: httpserver Image Name
   - variable: image.tag
-    default: "12"
+    default: "latest"
     description: "httpserver image tag"
     type: string
     label: Image Tag
