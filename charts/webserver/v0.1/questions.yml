@@ -1,22 +1,14 @@
 questions:
-- variable: defaultImage
-  default: true
-  description: "Use default Docker image"
-  label: Use Default Image
-  type: boolean
-  show_subquestion_if: false
-  group: "Container Images"
-  subquestions:
-  - variable: image.repository
-    default: "satomic/webserver"
-    description: "WordPress image name"
-    type: string
-    label: httpserver Image Name
-  - variable: image.tag
-    default: "v0.1"
-    description: "httpserver image tag"
-    type: string
-    label: Image Tag
+- variable: image.repository
+  default: "satomic/webserver"
+  description: "webserver image name"
+  type: string
+  label: httpserver Image Name
+- variable: image.tag
+  default: "v0.1"
+  description: "httpserver image tag"
+  type: string
+  label: Image Tag
 - variable: ingress.enabled
   default: false
   description: "Expose app using Layer 7 Load Balancer - ingress"
